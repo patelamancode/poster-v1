@@ -1,0 +1,44 @@
+.leftbar {
+  background-color: rgba(188, 143, 143, 0.541);
+  border-right: 1px solid rgba(0, 0, 0, 0.267);
+  flex: 2;
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 70px);
+  background-color: themed("bg");
+  color: black;
+  .container {
+    padding: 50px;
+    .menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 25px;
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+          cursor: pointer;
+        }
+        span {
+          font-weight: lighter;
+          color: grey;
+        }
+      }
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        p {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

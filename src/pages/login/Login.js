@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./login.scss";
 
 const Login = () => {
@@ -11,7 +12,7 @@ const Login = () => {
             both pages login and register page 
           </p>
           <span>Don't have an account?</span>
-          <button>Register</button>
+          <NavLink to="/register"><button>Register</button></NavLink>
         </div>
         <div className="right-card">
             <h1>Login</h1>

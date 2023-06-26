@@ -1,0 +1,53 @@
+.user-page {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid grey;
+  padding: 5px 8px;
+  margin-top: 5px;
+  .profile-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    img {
+      margin: auto;
+      height: 100px;
+      border-radius: 50%;
+      width: 100px;
+    }
+    .profile-description {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+
+      .username {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px;
+      }
+      .user-data {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px;
+
+        .followers {
+          span {
+            color: green;
+          }
+        }
+      }
+      a {
+        display: flex;
+        justify-content: left;
+        padding: 10px 0px;
+      }
+      .logout {
+        display: flex;
+        justify-content: end;
+        color: red;
+        padding: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -15,18 +15,15 @@ const Navbar = () => {
         </div>
       </div>
       <div className="right">
-        {/* {darkMode ? (
-          <WbSunnyOutlinedIcon onClick={toggle} />
-        ) : (
-          <DarkModeOutlinedIcon onClick={toggle} />
-        )} */}
-        <div className="user">
+        <NavLink to="/profile">
+          <div className="user">
           <img
             src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
             alt="profile"
           />
-          <span>Hemant Garg</span>
+          {/* <span>Hemant Garg</span> */}
         </div>
+        </NavLink>
       </div>
     </div>
   )

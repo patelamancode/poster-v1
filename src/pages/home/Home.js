@@ -1,11 +1,10 @@
-import React from 'react'
 import "./home.scss"
-import Layout from '../../components/layout/Layout'
+
 
 const Home = () => {
   return (
     <div>
-      <Layout />
+      <h1>Hey it's home page with all user posts</h1>
     </div>
   )
 }

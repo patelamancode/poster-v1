@@ -1,26 +1,28 @@
 import React from 'react'
 import "./Leftbar.scss"
+import { NavLink } from 'react-router-dom'
 
 const Leftbar = () => {
+  
   return (
     <div className="leftbar">
       <div className="container">
         <div className="menu">
           <div className="user">
-            <img src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg' alt='' />
+            <NavLink to="/profile"><img src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg' alt='' /></NavLink>
             <span>Hemant Garg</span>
           </div>
           <div className="item">
-            <p>Home</p>
+            <NavLink className="active" to="/home"><p>Home</p></NavLink>
           </div>
           <div className="item">
-            <p>Explore</p>
+            <NavLink to="/explore"><p>Explore</p></NavLink>
           </div>
           <div className="item">
-            <p>Bookmark</p>
+            <NavLink to="/bookmarked"><p>Bookmark</p></NavLink>
           </div>
           <div className="item">
-            <p>Liked</p>
+            <NavLink to="/liked"><p>Liked</p></NavLink>
           </div>
         </div>
       </div>

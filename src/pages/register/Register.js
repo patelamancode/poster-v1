@@ -1,8 +1,28 @@
 import { NavLink } from "react-router-dom";
 import "./register.scss";
+import { AuthContext } from "../../context/auth-context";
+import { useState } from "react";
 
 
 const Register = () => {
+
+  const {signupHandler} = AuthContext;
+
+  const [signupFormData, setSignupFormData] = useState({
+    firstName : "",
+    lastName: "",
+    username: "",
+    password : ""
+  })
+  const inputHandler = (event) =>{
+    const { name, value } = event;
+    setSignupFormData({ ...signupFormData, [name]: value })
+  }
+  const signupFormSubmitHandler = (event) =>{
+    event.preventDefault()
+    signupHandler(signupFormData);
+  }
+
   return (
     <div className="register">
       <div className="card">
@@ -17,11 +37,35 @@ const Register = () => {
         </div>
         <div className="right-card">
             <h1>Register</h1>
-            <form>
-                <input type="text" placeholder="Firstname" />
-                <input type="text" placeholder="Lastname" />
-                <input type="text" placeholder="email adderess" />
-                <input type="password" placeholder="password" />
+            <form onSubmit={signupFormSubmitHandler}>
+                <input 
+                  type="text"
+                  name="firstName"
+                  value={signupFormData.firstName} 
+                  placeholder="Firstname"
+                  onChange={inputHandler}
+                />
+                <input 
+                  type="text" 
+                  placeholder="Lastname"
+                  name="lastName"
+                  value={signupFormData.lastName}
+                  onChange={inputHandler}
+                />
+                <input 
+                  type="text" 
+                  placeholder="email id"
+                  name="usename"
+                  value={signupFormData.username}
+                  onChange={inputHandler}
+                />
+                <input 
+                  type="password" 
+                  placeholder="password"
+                  name="usename"
+                  value={signupFormData.username}
+                  onChange={inputHandler}
+                />
                 <button>Register</button>
             </form>
         </div>
